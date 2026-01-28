@@ -1,14 +1,19 @@
+students = [
+     ("Alice", 78),
+     ("Bob", 45),
+     ("Charlie", 90),
+     ("Diana", 62)
+]
 
 def unpacking(students_list):
-    for student in students_list:
-        name, score = student
+    for name, score in students_list:
         print(f"Name: {name}, Score: {score}")
 
 def student_above_60(students_list):
-    return [name for name, score in students_list if score == 60]
+    print([name for name, score in students_list if score == 60])
 
-def numbers_of_student_with_pass_mark(students):
-    return len([name for name, score in students if score >= 50])
+def numbers_of_student_with_pass_mark(students_list):
+    return len([name for name, score in students_list if score >= 50])
 
 
 products = [
@@ -36,8 +41,8 @@ points = [
     (-3,-2)
 ]
 
-def positive_points(points):
-    return list(filter(lambda point: point[1] >=0 and point[0] >= 0, points))
+def positive_points(points_list):
+    return list(filter(lambda point: point[1] >=0 and point[0] >= 0, points_list))
 
 def positive_unpacking(points_list):
     for point in points_list:
@@ -55,8 +60,7 @@ employees = [
 ]
 
 def unpacking_employees(employees_list):
-    for employee in employees_list:
-        name, department, salary = employee
+    for name, department, salary in employees_list:
         print(f"Name: {name}  -Department: {department}  -Salary: {salary}")
 
 def filtering_by_IT(employees_list):
