@@ -18,11 +18,11 @@ products = [
     ("USB Cable", 100)
 ]
 
-def product_above_100(products):
-    return list(filter(lambda product: product[1] > 100, products))
+def product_above_100(products_list):
+    return list(filter(lambda product: product[1] > 100, products_list))
 
-def sum_of_all_product_price(products):
-    return sum([price for name, price in products])
+def sum_of_all_product_price(products_list):
+    return sum([price for name, price in products_list])
 
 def unpacking_products(products_list):
     for product in products_list:
