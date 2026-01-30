@@ -10,7 +10,7 @@ def unpacking(students_list):
         print(f"Name: {name}, Score: {score}")
 
 def student_above_60(students_list):
-    print([name for name, score in students_list if score == 60])
+    print([name for name, score in students_list if score >= 60])
 
 def numbers_of_student_with_pass_mark(students_list):
     return len([name for name, score in students_list if score >= 50])
@@ -30,9 +30,10 @@ def sum_of_all_product_price(products_list):
     return sum([price for name, price in products_list])
 
 def unpacking_products(products_list):
-    for product in products_list:
-        name, price = product
-        print(f"Product: {name}-Price: {price}")
+        name, price = products_list[0]
+        print(f"Product: {name} -Price: {price}")
+
+print(unpacking_products(products))
 
 points = [
     (2,3),
@@ -49,7 +50,6 @@ def positive_unpacking(points_list):
         first_coordinate, second_coordinate = point
         if first_coordinate >= 0 and  second_coordinate >= 0:
             print(point)
-
 
 
 employees = [
@@ -71,7 +71,24 @@ def filtering_by_salary(employees_list):
 
 
 
-print(filtering_by_salary(employees))
+# print(filtering_by_sal?ary(employees))
+
+school = [
+    [
+        ("samuel", 20, 400),
+        ("ayobami", 10, 500),
+        ("emmanuel", 50, 100)
+    ],
+    [("english"), ("math"),("yoruba")]
+
+]
+
+def add_10_scores_to_student(student):
+    new_student = list(student)
+    new_student[2] +=10
+    return tuple(new_student)
 
 
+print(list(map(add_10_scores_to_student, school[0])))
+print("hello")
 
