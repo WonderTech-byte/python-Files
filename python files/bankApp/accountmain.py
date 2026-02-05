@@ -12,7 +12,11 @@ menu =  """
 =========================================
 """
 while True:
-    option = int(input(f"{menu}Enter option: "))
+    option = input(f"{menu}Enter option: ")
+    if option.isdigit() and int(option) > 4 :
+        option = int(option)
+    else:
+        print("Invalid option")
     match option:
         case 1: accounthelper.create_account()
         case 2: accounthelper.check_balance()

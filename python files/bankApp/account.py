@@ -29,8 +29,8 @@ demo_user3 = {
     "Pin": "4321",
 
 }
-bank.append(demo_user1)
-bank.append(demo_user2)
+# bank.append(demo_user1)
+# bank.append(demo_user2)
 
 
 
@@ -69,7 +69,7 @@ def validate_phone_number(phone_number):
         return True
     return False
 
-def validate_name1(name):
+def validate_name(name):
     import re
     if re.match('^[A-Za-z ]+$', name):
         return True
@@ -114,6 +114,8 @@ def transfer_money(phone_number, recipient_account, amount):
             user["Balance"] -= amount
             recipient["Balance"] += amount
             return "Transfer money successfully!!"
+        else:
+            return "Account too low to make transfer!!"
     else:
         return "cannot make transfer to your account!!"
     return "Insufficient funds, fund account!!"

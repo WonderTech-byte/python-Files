@@ -1,6 +1,7 @@
 import account
 
 def create_account():
+    print("\n======Create Account=========")
     name = input("Enter your name: ")
     while True:
         if not account.validate_name(name):
@@ -29,6 +30,7 @@ def create_account():
 
 
 def check_balance():
+    print("\n==========Create Check Balance============")
     phone_number = input("Enter your phone number: ")
     while True:
         if not account.validate_phone_number(phone_number):
@@ -47,6 +49,7 @@ def check_balance():
 
 
 def deposit_fund():
+    print("\n===============Deposit Fund==============")
     phone_number = input("Enter your phone number: ")
     while True:
         if not account.validate_phone_number(phone_number):
@@ -71,6 +74,7 @@ def deposit_fund():
 
 
 def transfer_fund():
+    print("\n============Make Transfer Fund===================")
     phone_number = input("Enter your phone number: ")
     while True:
         if not account.validate_phone_number(phone_number):
