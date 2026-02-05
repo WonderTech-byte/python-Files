@@ -1,4 +1,4 @@
 import re
 
-search = re.fullmatch(r"\d+", "1239876").group()
+search = re.findall(r"[a-z-A-Z]{3}", "messsn")
 print(search)
